@@ -1,11 +1,9 @@
 <!-- profile.html -->
+<div style="display:flex; justify-content:center; margin:20px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
-<div style="display:flex; justify-content:center; margin:10px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-<script src="https://richinfo.co/richpartners/pops/js/richads-pu-ob.js" data-pubid="654104" data-siteid="371650" async data-cfasync="false"></script>
   <div style="width:336px;">
 
     <style>
-      /* Card styling */
       .card {
         background: #1e1e2f;
         color: #f1f1f1;
@@ -13,7 +11,7 @@
         padding: 20px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 15px;
       }
 
       .profile-img {
@@ -55,35 +53,39 @@
         filter: brightness(0) invert(1);
       }
 
-      /* Ad slot styling */
+      /* Ad slot */
       #ad-slot {
         display: none;
         width: 100%;
         border-radius: 12px;
         background: rgba(78,168,255,0.1);
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 15px;
         padding: 10px;
-      }
-      #ad-slot ins.adsbygoogle {
-        display: block;
-        width: 100%;
-        height: auto;
       }
     </style>
 
-    <!-- Ad Slot (outside profile card) -->
+    <!-- Ad Slot (RichAds + AdSense ready) -->
     <div id="ad-slot">
-      <!-- Google AdSense Code: Replace with your IDs -->
+      <!-- RichAds script -->
+      <script src="https://richinfo.co/richpartners/pops/js/richads-pu-ob.js" 
+              data-pubid="654104" 
+              data-siteid="371650" 
+              async 
+              data-cfasync="false"></script>
+
+      <!-- AdSense (commented by default) -->
+      <!--
       <ins class="adsbygoogle"
            style="display:block"
-           data-ad-client="ca-pub-0123456789101112"
-           data-ad-slot="9876543210"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>
            (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
+      -->
     </div>
 
     <!-- Profile card -->
@@ -130,11 +132,12 @@
     <script>
       const profileContent = document.getElementById("profile-content");
       const adSlot = document.getElementById("ad-slot");
-      const AD_DURATION = 30000; // 30 seconds
-      const CHECK_INTERVAL = 60000; // 1 minutes
+      const AD_DURATION = 10000; // 10 seconds
+      const CHECK_INTERVAL = 120000; // 2 minutes
 
       function showAdOrProfile() {
-        const hasAd = adSlot.querySelector("ins.adsbygoogle");
+        // Check if RichAds loaded or AdSense is uncommented
+        const hasAd = adSlot.querySelector("script, ins.adsbygoogle");
         if (hasAd) {
           profileContent.style.display = "none";
           adSlot.style.display = "block";
@@ -148,13 +151,9 @@
         }
       }
 
-      // Initial display
       showAdOrProfile();
-
-      // Interval check
       setInterval(showAdOrProfile, CHECK_INTERVAL);
     </script>
 
   </div>
 </div>
-
