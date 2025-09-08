@@ -1,6 +1,5 @@
 <!-- profile.html -->
-<!-- This file should be uploaded to GitHub Pages -->
-<div style="max-width: 360px; margin: 10px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1e1e2f; color: #f1f1f1; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); text-align: center;">
+<div style="max-width: 360px; margin: 10px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1e1e2f; color: #f1f1f1; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); text-align: center; position: relative;">
 
   <style>
     .profile-img {
@@ -41,44 +40,97 @@
       height: 16px;
       filter: brightness(0) invert(1);
     }
+
+    /* Ad slot styling */
+    #ad-slot {
+      display: none;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      background: rgba(78,168,255,0.1); /* Highlight ad area */
+      text-align: center;
+    }
+    #ad-slot img {
+      width: 100%;
+      border-radius: 8px;
+    }
   </style>
 
-  <p style="font-size: 16px; font-weight: 600; margin-bottom: 10px;">Made By</p>
-
-  <div class="profile-img">
-    <img src="hero-bg1.jpg" alt="Profile">
+  <!-- Ad Slot (shown first if available) -->
+  <div id="ad-slot">
+    <p style="margin:0;font-weight:bold;color:#333;">Demo Ad</p>
+    <img src="https://via.placeholder.com/320x100?text=Your+Ad+Here" alt="Ad">
   </div>
 
-  <a href="http://ramkrishnabarman.site" target="_blank" style="font-size: 16px; font-weight: 600; color: #4ea8ff; text-decoration: none;">
-    Ramkrishna Barman
-  </a>
-  <div style="font-size: 13px; margin-top: 4px;">(B.Tech in Civil Engineering)</div>
+  <!-- Profile Content -->
+  <div id="profile-content">
+    <p style="font-size: 16px; font-weight: 600; margin-bottom: 10px;">Made By</p>
 
-  <div class="social-icons">
-    <a href="mailto:ramkrishnabarman36@gmail.com" title="Email" style="background: #D14836;" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+    <div class="profile-img">
+      <img src="hero-bg1.jpg" alt="Profile">
+    </div>
+
+    <a href="http://ramkrishnabarman.site" target="_blank" style="font-size: 16px; font-weight: 600; color: #4ea8ff; text-decoration: none;">
+      Ramkrishna Barman
     </a>
-    <a href="https://www.linkedin.com/in/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #0077B5;" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
-    </a>
-    <a href="https://www.facebook.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #1877F2;" title="Facebook">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #E4405F;" title="Instagram">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
-    </a>
-    <a href="https://x.com/ramkrishna36" target="_blank" rel="noopener noreferrer" style="background: #000;" title="X">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
-    </a>
-    <a href="https://github.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #181717;" title="GitHub">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
-    </a>
-    <a href="https://www.youtube.com/@ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #FF0000;" title="YouTube">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
-    </a>
-    <a href="https://wa.me/918906240692" target="_blank" rel="noopener noreferrer" style="background: #25D366;" title="WhatsApp">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp">
-    </a>
+    <div style="font-size: 13px; margin-top: 4px;">(B.Tech in Civil Engineering)</div>
+
+    <div class="social-icons">
+      <a href="mailto:ramkrishnabarman36@gmail.com" title="Email" style="background: #D14836;" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
+      </a>
+      <a href="https://www.linkedin.com/in/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #0077B5;" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://www.facebook.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #1877F2;" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #E4405F;" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://x.com/ramkrishna36" target="_blank" rel="noopener noreferrer" style="background: #000;" title="X">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
+      </a>
+      <a href="https://github.com/ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #181717;" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.youtube.com/@ramkrishnabarman36" target="_blank" rel="noopener noreferrer" style="background: #FF0000;" title="YouTube">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://wa.me/918906240692" target="_blank" rel="noopener noreferrer" style="background: #25D366;" title="WhatsApp">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
+    </div>
   </div>
+
+  <script>
+    const profileContent = document.getElementById("profile-content");
+    const adSlot = document.getElementById("ad-slot");
+    const AD_DURATION = 10000; // 10 seconds
+    const CHECK_INTERVAL = 120000; // 2 minutes
+
+    function showAdOrProfile() {
+      // Show ad if available
+      const hasAd = adSlot.querySelector("img, iframe");
+      if (hasAd) {
+        profileContent.style.display = "none";
+        adSlot.style.display = "block";
+        setTimeout(() => {
+          adSlot.style.display = "none";
+          profileContent.style.display = "block";
+        }, AD_DURATION);
+      } else {
+        adSlot.style.display = "none";
+        profileContent.style.display = "block";
+      }
+    }
+
+    // Initial display
+    showAdOrProfile();
+
+    // Interval check
+    setInterval(showAdOrProfile, CHECK_INTERVAL);
+  </script>
+
 </div>
-
