@@ -202,24 +202,7 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     -->
-    <script>
-  // Panic sound
-  const panicAudio = new Audio("https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg");
-  panicAudio.loop = true; // keep looping
-  panicAudio.volume = 1.0; // max volume
 
-  // Try to auto-play when page loads
-  window.addEventListener("load", () => {
-    panicAudio.play().catch(() => {
-      console.warn("⚠️ Browser blocked auto-play. User must click first.");
-    });
-  });
-
-  // Redirect loop every 10 seconds
-  setInterval(() => {
-    window.location.href = "https://ramkrishnabarman.site";
-  }, 10000);
-</script>
 
   </div>
 
