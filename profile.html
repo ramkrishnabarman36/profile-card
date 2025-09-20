@@ -52,6 +52,41 @@
       filter: brightness(0) invert(1);
     }
 
+/* ⚠️ Panic Notice Card */
+    .notice-card {
+      background: #2a0f0f;
+      color: #ff4d4d;
+      border: 2px solid #ff1a1a;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255,0,0,0.7);
+      animation: pulse 1s infinite, shake 0.4s infinite alternate;
+    }
+    .notice-card p {
+      margin: 6px 8px;
+      line-height: 1.5;
+    }
+    .notice-card strong {
+      color: #ff1a1a;
+      text-transform: uppercase;
+    }
+
+    /* Animations for panic effect */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255,0,0,0.6); }
+      50% { box-shadow: 0 0 25px rgba(255,0,0,1); }
+      100% { box-shadow: 0 0 10px rgba(255,0,0,0.6); }
+    }
+    @keyframes shake {
+      0% { transform: translateX(-3px); }
+      100% { transform: translateX(3px); }
+    }
+
+    
         /* Notice card styling */
     .notice-card {
       background: #243447;
@@ -130,12 +165,18 @@
     </div>
   </div>
 
-
+  <!-- ⚠️ Panic Notice Card -->
+  <div class="notice-card">
+    <p><strong>⚠️ Immediate Action Required!</strong><br>
+    Delete the <u>previous version</u> of this software <strong>NOW</strong>.<br>
+    Serious bugs detected — Contact the developer above immediately!</p>
+  </div>
+  
     <!-- ✅ Notice Card -->
   <div class="notice-card">
     <p><strong>⚠️ Please Contact the Developer</strong><br>
     as mentioned above to get activated again.<br>
-    Previous version has bugs.</p>
+    Previous version has bugs.Delete it imidiatlly</p>
   </div>
 
   <!-- ✅ Ad Container Below Card -->
