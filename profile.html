@@ -52,6 +52,26 @@
       filter: brightness(0) invert(1);
     }
 
+        /* Notice card styling */
+    .notice-card {
+      background: #243447;
+      color: #f1f1f1;
+      border: 1px solid #4ea8ff;
+      border-radius: 12px;
+      padding: 8px;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(78,168,255,0.2);
+    }
+    .notice-card p {
+      margin: 4px 8px;
+      line-height: 1.4;
+    }
+    .notice-card strong {
+      color: #4ea8ff;
+    }
+
     /* Ad container styling */
     .ad-container {
       background: rgba(78,168,255,0.05);
@@ -110,8 +130,17 @@
     </div>
   </div>
 
+
+    <!-- ✅ Notice Card -->
+  <div class="notice-card">
+    <p><strong>⚠️ Please Contact the Developer</strong><br>
+    as mentioned above to get activated again.<br>
+    Previous version has bugs.</p>
+  </div>
+
   <!-- ✅ Ad Container Below Card -->
   <div class="ad-container">
+
     <!-- RichAds Example -->
     <script src="https://richinfo.co/richpartners/pops/js/richads-pu-ob.js" 
             data-pubid="654104" 
