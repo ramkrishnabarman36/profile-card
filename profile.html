@@ -1,209 +1,102 @@
-<div style="width:800px; max-width:100%; margin:0 auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<!-- profile.html (MV3 SAFE) -->
+<div style="display:flex; justify-content:center; margin:10px auto; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+  <div style="width:368px;">
 
-  <style>
-    /* Profile card styling */
-    .card {
-      background: #1e1e2f;
-      color: #f1f1f1;
-      border-radius: 12px;
-      padding: 12px; /* reduced padding */
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      text-align: center;
-      margin-bottom: 10px;
-    }
+    <style>
+      .card {
+        background:#1e1e2f;
+        color:#f1f1f1;
+        border-radius:12px;
+        padding:20px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.3);
+        text-align:center;
+      }
 
-    .profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 5px auto;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-    }
-    .profile-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .profile-img {
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        overflow:hidden;
+        margin:0 auto 12px;
+        box-shadow:0 2px 6px rgba(255,255,255,0.1);
+      }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 6px;
-    }
-    .social-icons a {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #444;
-      transition: transform 0.2s ease;
-    }
-    .social-icons a:hover {
-      transform: scale(1.1);
-    }
-    .social-icons img {
-      width: 14px;
-      height: 14px;
-      filter: brightness(0) invert(1);
-    }
+      .profile-img img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
 
-/* ⚠️ Panic Notice Card */
-    .notice-card {
-      background: #2a0f0f;
-      color: #ff4d4d;
-      border: 2px solid #ff1a1a;
-      border-radius: 12px;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 15px;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(255,0,0,0.7);
-      animation: pulse 1s infinite, shake 0.4s infinite alternate;
-    }
-    .notice-card p {
-      margin: 6px 8px;
-      line-height: 1.5;
-    }
-    .notice-card strong {
-      color: #ff1a1a;
-      text-transform: uppercase;
-    }
+      .social-icons {
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:14px;
+      }
 
-    /* Animations for panic effect */
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px rgba(255,0,0,0.6); }
-      50% { box-shadow: 0 0 25px rgba(255,0,0,1); }
-      100% { box-shadow: 0 0 10px rgba(255,0,0,0.6); }
-    }
-    @keyframes shake {
-      0% { transform: translateX(-3px); }
-      100% { transform: translateX(3px); }
-    }
+      .social-icons a {
+        width:28px;
+        height:28px;
+        border-radius:50%;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        background:#444;
+      }
 
-    
-        /* Notice card styling */
-    .notice-card {
-      background: #243447;
-      color: #f1f1f1;
-      border: 1px solid #4ea8ff;
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 14px;
-      box-shadow: 0 2px 8px rgba(78,168,255,0.2);
-    }
-    .notice-card p {
-      margin: 4px 8px;
-      line-height: 1.4;
-    }
-    .notice-card strong {
-      color: #4ea8ff;
-    }
+      .social-icons img {
+        width:16px;
+        height:16px;
+        filter:brightness(0) invert(1);
+      }
+    </style>
 
-    /* Ad container styling */
-    .ad-container {
-      background: rgba(78,168,255,0.05);
-      border-radius: 12px;
-      padding: 12px; /* reduced padding */
-      text-align: center;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-      height: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000px;
-    }
-    .ad-container ins.adsbygoogle {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  </style>
+    <!-- Profile card -->
+    <div class="card" id="profile-content">
+      <p style="font-size:16px; font-weight:600; margin-bottom:10px;">
+        Designed & Developed by
+      </p>
 
-  <!-- Profile Card -->
-  <div class="card" id="profile-content">
-    <p style="font-size: 14px; font-weight: 600; margin: 4px 0;">Made By</p>
+      <div class="profile-img">
+        <!-- LOCAL IMAGE ONLY -->
+        <img src="assets/hero-bg1.svg" alt="Profile">
+      </div>
 
-    <div class="profile-img">
-      <img src="hero-bg1.jpg" alt="Profile" loading="lazy">
+      <a href="https://ramkrishnabarman.site"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="font-size:16px; font-weight:600; color:#4ea8ff; text-decoration:none;">
+        Ramkrishna Barman
+      </a>
+
+      <div class="social-icons">
+        <a href="mailto:ramkrishnabarman36@gmail.com" title="Email">
+          <img src="assets/gmail.svg" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/ramkrishnabarman36" target="_blank" title="LinkedIn">
+          <img src="assets/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.facebook.com/ramkrishnabarman36" target="_blank" title="Facebook">
+          <img src="assets/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/ramkrishnabarman36" target="_blank" title="Instagram">
+          <img src="assets/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://x.com/ramkrishna36" target="_blank" title="X">
+          <img src="assets/x.svg" alt="X">
+        </a>
+        <a href="https://github.com/ramkrishnabarman36" target="_blank" title="GitHub">
+          <img src="assets/github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.youtube.com/@ramkrishnabarman36" target="_blank" title="YouTube">
+          <img src="assets/youtube.svg" alt="YouTube">
+        </a>
+        <a href="https://wa.me/918906240692" target="_blank" title="WhatsApp">
+          <img src="assets/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </div>
     </div>
 
-    <a href="http://ramkrishnabarman.site" target="_blank" 
-       style="font-size: 14px; font-weight: 600; color: #4ea8ff; text-decoration: none;">
-      Ramkrishna Barman
-    </a>
-    <div style="font-size: 12px; margin-top: 2px;">(B.Tech in Civil Engineering)</div>
-
-    <div class="social-icons">
-      <a href="mailto:ramkrishnabarman36@gmail.com" style="background: #D14836;" title="Email" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email">
-      </a>
-      <a href="https://www.linkedin.com/in/ramkrishnabarman36" style="background: #0077B5;" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
-      </a>
-      <a href="https://www.facebook.com/ramkrishnabarman36" style="background: #1877F2;" title="Facebook" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/ramkrishnabarman36" style="background: #E4405F;" title="Instagram" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
-      </a>
-      <a href="https://x.com/ramkrishna36" style="background: #000;" title="X" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
-      </a>
-      <a href="https://github.com/ramkrishnabarman36" style="background: #181717;" title="GitHub" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub">
-      </a>
-      <a href="https://www.youtube.com/@ramkrishnabarman36" style="background: #FF0000;" title="YouTube" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
-      </a>
-      <a href="https://wa.me/918906240692" style="background: #25D366;" title="WhatsApp" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp">
-      </a>
-    </div>
   </div>
-
-  <!-- ⚠️ Panic Notice Card -->
-  <div class="notice-card">
-    <p><strong>⚠️ Immediate Action Required!</strong><br>
-    Delete the <u>previous version</u> of this software <strong>NOW</strong>.<br>
-    Serious bugs detected — Contact the developer above immediately! <br>
-    Becasue Developer wants it to be deleted and wants deliver best and Quality version that can minimazie more time.</p>
-  </div>
-  
-    <!-- ✅ Notice Card -->
-  <div class="notice-card">
-    <p><strong>⚠️ Please Contact the Developer</strong><br>
-    as mentioned above to get activated again.<br>
-    Previous version has bugs.Delete it imidiatlly</p>
-  </div>
-
-  <!-- ✅ Ad Container Below Card -->
-  <div class="ad-container">
-
-    <!-- RichAds Example -->
-    <script src="https://richinfo.co/richpartners/pops/js/richads-pu-ob.js" 
-            data-pubid="654104" 
-            data-siteid="371650" 
-            async 
-            data-cfasync="false"></script>
-
-    <!-- OR Google AdSense Example -->
-    <!--
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    -->
-
-
-  </div>
-
 </div>
